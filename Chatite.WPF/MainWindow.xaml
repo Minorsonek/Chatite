@@ -1,0 +1,87 @@
+﻿<Window x:Class="Chatite.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chatite.WPF"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Title="MainWindow" MinHeight="350" MinWidth="525">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+
+                        <Border CornerRadius="10"
+                                Background="{StaticResource WhiteLightBrush}">
+
+                            <Grid>
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Grid>
+                                    
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Button Content="ICON" />
+
+                                    <TextBlock Grid.Column="1"
+                                               Grid.ColumnSpan="3"
+                                               HorizontalAlignment="Center"
+                                               FontSize="20"
+                                               Text="Chatite" />
+
+                                    <StackPanel Grid.Column="2"
+                                                Orientation="Horizontal">
+
+                                        <Button Content="_" />
+                                        <Button Content="[]" />
+                                        <Button Content="X" />
+
+                                    </StackPanel>
+
+                                </Grid>
+
+                                <Border Grid.Row="1" ClipToBounds="True">
+                                    <ContentPresenter Content="{TemplateBinding Content}" />
+                                </Border>
+                                
+                            </Grid>
+                            
+                        </Border>
+                        
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <WindowChrome.WindowChrome>
+
+        <WindowChrome 
+            ResizeBorderThickness="3"
+            CaptionHeight="20"
+            CornerRadius="0"
+            GlassFrameThickness="0"
+            />
+
+    </WindowChrome.WindowChrome>
+
+    <Grid Background="{StaticResource BlackDarkBrush}">
+        
+    </Grid>
+    
+</Window>

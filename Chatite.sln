@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatite.WPF", "Chatite.WPF\Chatite.WPF.csproj", "{5B3DF504-9DCE-4F6A-BC95-6063554F7006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatite.Core", "Chatite.Core\Chatite.Core.csproj", "{B98317FE-06F3-49D2-A6DF-801B4AF4147E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B3DF504-9DCE-4F6A-BC95-6063554F7006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3DF504-9DCE-4F6A-BC95-6063554F7006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3DF504-9DCE-4F6A-BC95-6063554F7006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3DF504-9DCE-4F6A-BC95-6063554F7006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98317FE-06F3-49D2-A6DF-801B4AF4147E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98317FE-06F3-49D2-A6DF-801B4AF4147E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98317FE-06F3-49D2-A6DF-801B4AF4147E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98317FE-06F3-49D2-A6DF-801B4AF4147E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21599F55-998E-4BDE-928D-C228A0CBD564}
+	EndGlobalSection
+EndGlobal
