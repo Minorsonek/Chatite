@@ -19,48 +19,70 @@
                     <ControlTemplate TargetType="{x:Type Window}">
 
                         <Border CornerRadius="10"
+                                BorderBrush="{StaticResource BlackDarkBrush}"
+                                BorderThickness="2"
                                 Background="{StaticResource WhiteLightBrush}">
 
                             <Grid>
-                                
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="20" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
+
+                                <Border x:Name="Container"
+                                        Background="{StaticResource BlackLightBrush}"
+                                        CornerRadius="10" />
+
+                                <Border Background="{StaticResource BlackLightBrush}"
+                                        CornerRadius="10">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0.5" Opacity="0.2" />
+                                    </Border.Effect>
+                                </Border>
 
                                 <Grid>
+
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}" />
+                                    </Grid.OpacityMask>
+                                
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Background="{StaticResource WhiteLightBrush}">
                                     
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
 
-                                    <Button Content="ICON" />
+                                        <Button Content="ICON"
+                                                Style="{StaticResource SystemIconButton}" />
 
-                                    <TextBlock Grid.Column="1"
-                                               Grid.ColumnSpan="3"
-                                               HorizontalAlignment="Center"
-                                               FontSize="20"
-                                               Text="Chatite" />
+                                        <TextBlock Grid.Column="1"
+                                                   Grid.ColumnSpan="3"
+                                                   HorizontalAlignment="Center"
+                                                   FontSize="20"
+                                                   Text="Chatite" />
 
-                                    <StackPanel Grid.Column="2"
-                                                Orientation="Horizontal">
+                                        <StackPanel Grid.Column="2"
+                                                    Orientation="Horizontal">
 
-                                        <Button Content="_" />
-                                        <Button Content="[]" />
-                                        <Button Content="X" />
+                                            <Button Content="_" />
+                                            <Button Content="[]" />
+                                            <Button Content="X" />
 
-                                    </StackPanel>
+                                        </StackPanel>
+
+                                    </Grid>
+
+                                    <Border Grid.Row="1" ClipToBounds="True">
+                                        <ContentPresenter Content="{TemplateBinding Content}" />
+                                    </Border>
 
                                 </Grid>
 
-                                <Border Grid.Row="1" ClipToBounds="True">
-                                    <ContentPresenter Content="{TemplateBinding Content}" />
-                                </Border>
-                                
                             </Grid>
-                            
+
                         </Border>
                         
                     </ControlTemplate>
@@ -80,8 +102,14 @@
 
     </WindowChrome.WindowChrome>
 
-    <Grid Background="{StaticResource BlackDarkBrush}">
-        
-    </Grid>
+    <StackPanel Background="{StaticResource WhiteLightBrush}">
+
+        <TextBlock Text="Font zwykly" />
+        <TextBlock Text="Font zwykly" 
+                   FontFamily="{StaticResource FontLatoRegular}" />
+        <TextBlock Text="Font zwykly" 
+                   FontFamily="{StaticResource FontLatoBold}" />
+
+    </StackPanel>
     
 </Window>
