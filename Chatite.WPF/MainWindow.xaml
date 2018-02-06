@@ -43,7 +43,7 @@
                                     </Grid.OpacityMask>
                                 
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="20" />
+                                        <RowDefinition Height="{Binding CaptionHeight, FallbackValue=20}" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
 
@@ -67,9 +67,15 @@
                                         <StackPanel Grid.Column="2"
                                                     Orientation="Horizontal">
 
-                                            <Button Content="_" />
-                                            <Button Content="[]" />
-                                            <Button Content="X" />
+                                            <Button Content="_"
+                                                    Command="{Binding MinimizeCommand}"
+                                                    Style="{StaticResource WindowControlButton}"/>
+                                            <Button Content="[]"
+                                                    Command="{Binding MaximizeCommand}"
+                                                    Style="{StaticResource WindowControlButton}"/>
+                                            <Button Content="X"
+                                                    Command="{Binding CloseCommand}"
+                                                    Style="{StaticResource WindowCloseButton}"/>
 
                                         </StackPanel>
 
@@ -95,7 +101,7 @@
 
         <WindowChrome 
             ResizeBorderThickness="3"
-            CaptionHeight="20"
+            CaptionHeight="{Binding CaptionHeight, FallbackValue=20}"
             CornerRadius="0"
             GlassFrameThickness="0"
             />
@@ -109,6 +115,9 @@
                    FontFamily="{StaticResource FontLatoRegular}" />
         <TextBlock Text="Font zwykly" 
                    FontFamily="{StaticResource FontLatoBold}" />
+
+        <Button Content="Cos"
+                Command="{Binding MaximizeCommand}" />
 
     </StackPanel>
     
