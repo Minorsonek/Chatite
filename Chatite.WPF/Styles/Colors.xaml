@@ -11,6 +11,15 @@
     <Color x:Key="WhiteDark">#cecece</Color>
     <SolidColorBrush x:Key="WhiteDarkBrush" Color="{StaticResource WhiteDark}" />
 
+    <Color x:Key="Green">#558b6e</Color>
+    <SolidColorBrush x:Key="GreenBrush" Color="{StaticResource Green}" />
+
+    <Color x:Key="Blue">#246eb9</Color>
+    <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource Blue}" />
+
+    <Color x:Key="Yellow">#f3a712</Color>
+    <SolidColorBrush x:Key="YellowBrush" Color="{StaticResource Yellow}" />
+
     <Color x:Key="BlackLight">#606060</Color>
     <SolidColorBrush x:Key="BlackLightBrush" Color="{StaticResource BlackLight}" />
 

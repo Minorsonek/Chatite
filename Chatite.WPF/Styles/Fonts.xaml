@@ -5,6 +5,7 @@
 
     <FontFamily x:Key="FontLatoRegular">pack://application;,,,/Chatite.WPF;component/Assets/Fonts/Lato/#Lato Regular</FontFamily>
     <FontFamily x:Key="FontLatoBold">pack://application;,,,/Chatite.WPF;component/Assets/Fonts/Lato/#Lato Bold</FontFamily>
+    <FontFamily x:Key="FontAwesome">pack://application;,,,/Chatite.WPF;component/Assets/Fonts/Font Awesome/#FontAwesome</FontFamily>
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource FontLatoRegular}" />
@@ -28,5 +29,9 @@
     <system:Double x:Key="FontSizeLarge">20</system:Double>
     <system:Double x:Key="FontSizeVeryLarge">24</system:Double>
     <system:Double x:Key="FontSizeTitleLarge">32</system:Double>
+
+    <system:String x:Key="FontAwesomeSquareIcon">&#xf096;</system:String>
+    <system:String x:Key="FontAwesomeCrossIcon">&#xf00d;</system:String>
+    <system:String x:Key="FontAwesomeUnderscoreIcon">&#xf2d1;</system:String>
 
 </ResourceDictionary>

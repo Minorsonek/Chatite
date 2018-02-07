@@ -10,6 +10,7 @@
         SizeToContent="WidthAndHeight"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
+        Icon="/Assets/Logo/logo.png"
         Title="MainWindow" MinHeight="350" MinWidth="525">
 
     <Window.Resources>
@@ -43,7 +44,7 @@
                                     </Grid.OpacityMask>
                                 
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="{Binding CaptionHeight, FallbackValue=20}" />
+                                        <RowDefinition Height="{Binding CaptionHeight, FallbackValue=32}" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
 
@@ -55,8 +56,9 @@
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
 
-                                        <Button Content="ICON"
-                                                Style="{StaticResource SystemIconButton}" />
+                                        <Button Command="{Binding MenuCommand}"  Style="{StaticResource SystemIconButton}">
+                                            <Image Source="/Assets/Logo/logo.png" />
+                                        </Button>
 
                                         <TextBlock Grid.Column="1"
                                                    Grid.ColumnSpan="3"
@@ -67,13 +69,13 @@
                                         <StackPanel Grid.Column="2"
                                                     Orientation="Horizontal">
 
-                                            <Button Content="_"
+                                            <Button Content="{StaticResource FontAwesomeUnderscoreIcon}"
                                                     Command="{Binding MinimizeCommand}"
                                                     Style="{StaticResource WindowControlButton}"/>
-                                            <Button Content="[]"
+                                            <Button Content="{StaticResource FontAwesomeSquareIcon}"
                                                     Command="{Binding MaximizeCommand}"
                                                     Style="{StaticResource WindowControlButton}"/>
-                                            <Button Content="X"
+                                            <Button Content="{StaticResource FontAwesomeCrossIcon}"
                                                     Command="{Binding CloseCommand}"
                                                     Style="{StaticResource WindowCloseButton}"/>
 
@@ -101,7 +103,7 @@
 
         <WindowChrome 
             ResizeBorderThickness="3"
-            CaptionHeight="{Binding CaptionHeight, FallbackValue=20}"
+            CaptionHeight="{Binding CaptionHeight, FallbackValue=32}"
             CornerRadius="0"
             GlassFrameThickness="0"
             />

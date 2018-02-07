@@ -8,13 +8,14 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Chatite.WPF</RootNamespace>
     <AssemblyName>Chatite.WPF</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,6 +64,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\WindowViewModel.cs" />
+    <Compile Include="Window\WindowResizer.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,6 +118,10 @@
     <Resource Include="Assets\Fonts\Lato\Lato-Light.ttf" />
     <Resource Include="Assets\Fonts\Lato\Lato-LightItalic.ttf" />
     <Resource Include="Assets\Fonts\Lato\Lato-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Font Awesome\Font Awesome 5 Brands-Regular-400.otf" />
+    <Resource Include="Assets\Fonts\Font Awesome\Font Awesome 5 Free-Regular-400.otf" />
+    <Resource Include="Assets\Fonts\Font Awesome\Font Awesome 5 Free-Solid-900.otf" />
+    <Resource Include="Assets\Fonts\Font Awesome\fontawesome-webfont.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Logo\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.3.25\build\Fody.targets" Condition="Exists('..\packages\Fody.2.3.25\build\Fody.targets')" />
